@@ -7,6 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "upload" : "git add * && git commit -m 'updating' && git push origin main"
   },
-  "author": "",
+  "author": "Sohel Siddique Ashik",
   "license": "ISC"
 }

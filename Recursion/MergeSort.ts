@@ -1,7 +1,6 @@
 
 
 // sort two sorted array
-
 function mergeSortedArray(arr1:number[], arr2:number[]): number[]{
     const sorted:number[] = []; //final sorted array
 
@@ -25,7 +24,15 @@ function mergeSortedArray(arr1:number[], arr2:number[]): number[]{
     return sorted;
 }
 
+function MergeSort(arr:number[]):number[] {
 
-const a = mergeSortedArray([1,33,53,223], [43,123,322]);
+    if(arr.length === 1) return arr; // base case
 
-console.log(a);
+    const left:number[] = MergeSort(arr.slice(0,arr.length/2)); // making the left array
+    const right:number[] = MergeSort(arr.slice(arr.length/2)); //making the right array
+
+    return mergeSortedArray(left,right); // returning the sorted array
+}
+
+
+console.log(MergeSort([41,32,324,1,-342,420134,-3245,-234,1234,2,1,23,5]))
