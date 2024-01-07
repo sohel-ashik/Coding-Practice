@@ -1,10 +1,11 @@
 
 // given an distinct charecter string, make a subset for all those charecter
 
+const res:string[] = []
 
 function subsetMaker(main:string[] = [],remain:string[] = []):void{
    if(remain.length === 0){
-        console.log(main.join(''));
+        res.push(main.join(''))
         return;
    }
 
@@ -19,5 +20,6 @@ function subsetMaker(main:string[] = [],remain:string[] = []):void{
 
 }
 
-const a = 'abc';
+const a = 'abcd';
 subsetMaker([],a.split(''));
+console.log(res);
